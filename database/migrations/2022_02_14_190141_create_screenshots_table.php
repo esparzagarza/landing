@@ -17,8 +17,8 @@ class CreateScreenshotsTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('item_id');
-            $table->string('image');
-            $table->integer('order');
+            $table->string('image')->nullable();
+            $table->integer('order')->default(1);
             $table->foreign('item_id')->references('id')->on('items');
 
             $table->timestamps();

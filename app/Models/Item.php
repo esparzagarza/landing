@@ -18,9 +18,4 @@ class Item extends Model
     {
         return $this->hasMany(Screenshot::class);
     }
-
-    public function getPublishedAtAttribute()
-    {
-        return $this->created->format('d/m/y');
-    }
 }

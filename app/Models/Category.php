@@ -9,11 +9,6 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function getPublishedAtAttribute()
-    {
-        return $this->updated_at->format('d/m/y');
-    }
-
     public function inventory()
     {
         return $this->hasMany(Item::class);

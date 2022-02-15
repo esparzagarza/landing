@@ -16,18 +16,17 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('category_id');
-            $table->string('name');
-            $table->text('description');
-            $table->string('linkTo');
-            $table->float('price');
-            $table->string('image');
-            $table->string('tags');
+            $table->unsignedBigInteger('category_id')->default(1);
+            $table->string('name')->nullable();
+            $table->text('description')->nullable();
+            $table->string('linkTo')->nullable();
+            $table->float('price')->default(0);
+            $table->string('image')->nullable();
+            $table->string('tags')->nullable();
 
             $table->foreign('category_id')->references('id')->on('categories');
-            
-            $table->timestamps();
 
+            $table->timestamps();
         });
     }
 

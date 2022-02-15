@@ -1,29 +1,33 @@
 <?php
 
-namespace App\Http\Resources\land\v2;
+namespace App\Http\Resources\cms\v1;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class ItemResource extends JsonResource
 {
-    public $resources = CategoryResource::class;
-
     /**
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
-
     public function toArray($request)
     {
-        $inventory = array();
-        foreach ($this->inventory as $arr) array_push($inventory, $this->childToArray($arr));
+
+        $screenshots = array();
+        foreach ($this->screenshots as $arr) array_push($screenshots, $this->childToArray($arr));
 
         return [
             'id' => $this->id,
+            'category_name' => $this->category->name,
             'name' => $this->name,
-            'inventory' => $inventory,
+            'description' => $this->description,
+            'linkTo' => $this->linkTo,
+            'price' => $this->price,
+            'image' => $this->image,
+            'tags'  => $this->tags,
+            'screenshots' => $screenshots
         ];
     }
 
@@ -31,12 +35,8 @@ class CategoryResource extends JsonResource
     {
         return [
             'id' => $arr['id'],
-            'name' => $arr['name'],
-            'description' => $arr['description'],
-            'linkTo' => $arr['linkTo'],
-            'price' => $arr['price'],
             'image' => $arr['image'],
-            'tags' => $arr['tags'],
+            'order' => $arr['order'],
         ];
     }
 }

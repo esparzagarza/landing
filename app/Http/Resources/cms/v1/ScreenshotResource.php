@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\land\v1;
+namespace App\Http\Resources\cms\v1;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class ScreenshotResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +16,8 @@ class CategoryResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'inventory' => $this->inventory
+            'image' => $this->image,
+            'order' => $this->order,
         ];
     }
 }

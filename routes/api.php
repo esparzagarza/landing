@@ -14,5 +14,9 @@ Route::apiResource('land/v2/category', landCategoryV2::class)->only(['index', 's
 
 // CMS: Private Api for CMS
 use App\Http\Controllers\Api\cms\v1\CategoryController as cmsCategoryV1;
+use App\Http\Controllers\Api\cms\v1\ItemController as cmsItemV1;
+use App\Http\Controllers\Api\cms\v1\ScreenshotController as cmsScreenshotV1;
 
 Route::apiResource('cms/v1/category', cmsCategoryV1::class);
+Route::apiResource('cms/v1/item', cmsItemV1::class);
+Route::apiResource('cms/v1/screenshot', cmsScreenshotV1::class);
