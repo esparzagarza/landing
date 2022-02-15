@@ -17,6 +17,12 @@ use App\Http\Controllers\Api\cms\v1\CategoryController as cmsCategoryV1;
 use App\Http\Controllers\Api\cms\v1\ItemController as cmsItemV1;
 use App\Http\Controllers\Api\cms\v1\ScreenshotController as cmsScreenshotV1;
 
-Route::apiResource('cms/v1/category', cmsCategoryV1::class);
-Route::apiResource('cms/v1/item', cmsItemV1::class);
-Route::apiResource('cms/v1/screenshot', cmsScreenshotV1::class);
+Route::apiResource('cms/v1/category', cmsCategoryV1::class)->middleware('auth:sanctum');
+Route::apiResource('cms/v1/item', cmsItemV1::class)->middleware('auth:sanctum');
+Route::apiResource('cms/v1/screenshot', cmsScreenshotV1::class)->only(['store', 'update', 'destroy'])->middleware('auth:sanctum');
+
+
+Route::post('login', [
+    App\Http\Controllers\Api\LoginController::class,
+    'login'
+]);
