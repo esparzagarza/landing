@@ -15,7 +15,7 @@ class ScreenshotFactory extends Factory
     {
         return [
             'item_id' => rand(1, 20),
-            'image' => $this->faker->url,
+            'image' => $this->faker->imageUrl(800,600),
             'order' => rand(1, 5),
 
         ];

@@ -19,7 +19,7 @@ class ItemFactory extends Factory
             'description' => $this->faker->sentence,
             'linkTo' => $this->faker->url,
             'price' => $this->faker->randomFloat($nbMaxDecimals = 0, $min = 25, $max = 200),
-            'image' => $this->faker->url,
+            'image' => $this->faker->imageUrl(800,600),
             'tags' => $this->faker->sentence
         ];
     }
