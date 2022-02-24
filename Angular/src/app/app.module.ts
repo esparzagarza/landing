@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './cms/dashboard/dashboard.component';
+import { WebsiteComponent } from './land/website/website.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

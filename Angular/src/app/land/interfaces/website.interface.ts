@@ -1,4 +1,4 @@
-export interface HomeResponse {
+export interface WebsiteResponse {
     ok: boolean,
     data?: [],
     msg?: string,

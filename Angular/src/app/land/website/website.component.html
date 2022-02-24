@@ -1,0 +1,21 @@
+<div class="row g-9">
+    <div class="card mb-4 mb-xl-6" *ngFor="let item of items">
+        <div class="card bgi-no-repeat card-xl-stretch mb-xl-8 cursor-pointer"
+            style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/abstract-3.svg)">
+            <div class="card-header">
+                <img src="{{ item.image }}" width="250">
+            </div>
+            <div class="card-body">
+                <a href="#" class="card-title fw-bolder text-muted text-hover-primary fs-4">{{ item.name }}</a>
+                <p class="text-dark-75 fw-bold fs-5 m-0">{{ item.description }} </p>
+                <div class="py-1">
+                    <span class="text-dark fs-1 fw-bolder me-2">{{ item.tags }}</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="{{ item.linkTo }}">Live demo</a>
+                <div class="fw-bolder text-primary my-6">{{ item.price | currency:'USD' }}</div>
+            </div>
+        </div>
+    </div>
+</div>
