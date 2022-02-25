@@ -28,12 +28,23 @@
       margin: 0px; 
       padding: 0px; 
       box-sizing: border-box;
-      font-family: Poppins-Bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   body, html {
       height: 100%;
-      font-family: Poppins-Regular, sans-serif;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100%;
+    background: url("../src/assets/images/bg-01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
   }
   
   /*---------------------------------------------*/
@@ -2903,4 +2914,3 @@
   -ms-align-items: center;
   align-items: center;
   }
-  

@@ -1,21 +1,53 @@
-<div class="row g-9">
-    <div class="card mb-4 mb-xl-6" *ngFor="let item of items">
-        <div class="card bgi-no-repeat card-xl-stretch mb-xl-8 cursor-pointer"
-            style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/abstract-3.svg)">
-            <div class="card-header">
-                <img src="{{ item.image }}" width="250">
-            </div>
-            <div class="card-body">
-                <a href="#" class="card-title fw-bolder text-muted text-hover-primary fs-4">{{ item.name }}</a>
-                <p class="text-dark-75 fw-bold fs-5 m-0">{{ item.description }} </p>
-                <div class="py-1">
-                    <span class="text-dark fs-1 fw-bolder me-2">{{ item.tags }}</span>
-                </div>
-            </div>
-            <div class="card-footer">
-                <a href="{{ item.linkTo }}">Live demo</a>
-                <div class="fw-bolder text-primary my-6">{{ item.price | currency:'USD' }}</div>
-            </div>
+<mat-toolbar class="mat-elevation-z8" [hidden]="sidenav.mode === 'side'">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+        <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    Web Systems Development
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <img class="avatar mat-elevation-z8" src="../../../assets/images/imagotipo.jpg" />
+
+        <h4 class="name">Esparza Garza</h4>
+        <p class="designation">Systems Engineer</p>
+
+
+        <button mat-button class="menu-button" (click)="reloadItems('1')">
+            <mat-icon>home</mat-icon>
+            <span>All Systems</span>
+        </button>
+        <button mat-button class="menu-button" *ngFor="let cat of getCategories" (click)="reloadItems(cat.id)">
+            <mat-icon>{{ cat.icon }}</mat-icon>
+            <span>{{ cat.name }}</span>
+        </button>
+
+
+        <mat-divider></mat-divider>
+
+        <p><a href="{{ _pageInfoService.info.linkedin }}" target="_blank">2021 {{ _pageInfoService.info.short_name
+                }}</a>
+        </p>
+        <p> <a href="https://sistenet.mx" target="_blank"> View All</a> </p>
+
+    </mat-sidenav>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="24px grid">
+        <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let item of reloadedItems">
+            <mat-card>
+                <img mat-card-image src="{{ item.image }}">
+                <mat-card-title>{{ item.name }}</mat-card-title>
+                <mat-card-content> {{ item.description | slice:0:30 }} </mat-card-content>
+                <mat-card-content> {{ item.tags | slice:0:20 }} </mat-card-content>
+                <mat-card-actions>
+                    <a href="{{ item.linkTo }}" target="_blank">Live demo</a>
+                    <div class="fw-bolder text-primary my-6">{{ item.price | currency:'USD' }}</div>
+                </mat-card-actions>
+            </mat-card>
         </div>
     </div>
-</div>
+
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>

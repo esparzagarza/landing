@@ -14,13 +14,20 @@ export class WebsiteService {
   constructor(private http: HttpClient) { }
 
   getItems() {
-
     const url: string = `${this.baseUrl}/land`;
     return this.http.get<WebsiteResponse>(url)
       .pipe(
         map(resp => resp.data),
         catchError((err) => of(err.error.msg))
       );
+  }
 
+  getCategories() {
+    const url: string = `${this.baseUrl}/land/categories`;
+    return this.http.get<WebsiteResponse>(url)
+      .pipe(
+        map(resp => resp.data),
+        catchError((err) => of(err.error.msg))
+      );
   }
 }
