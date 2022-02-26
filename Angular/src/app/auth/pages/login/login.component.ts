@@ -8,14 +8,12 @@ import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styles: [
-  ]
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
 
   myForm: FormGroup = this.fb.group({
-    email: ['isc.pedroesparza@gmail.com', [Validators.required, Validators.email]],
+    email: ['mpouros@example.net', [Validators.required, Validators.email]],
     password: ['password', [Validators.required, Validators.minLength(6)]],
   });
 

@@ -1,4 +1,49 @@
-# Angular
+### About this App
+
+-   A powerful tool for Project/Task Management
+-   Easy coupling Script into Production Systems
+-   Programmed with clean code and maintainable functions
+-   Built-in unit test layer that verifies each function
+-   MVC Architecture that makes it ideal when needs to
+    increase/customize functionality
+
+Modules developed to the next
+=============================
+
+  Dashboard                                 
+  Professional Template                     
+  Unlimited Tasks                           
+
+FrontEnd Side:
+--------------
+
+-   Angular 13.0.1
+-   npm 8.1.2
+
+-- Install global angular CLI
+```bash
+-   npm install --global @angular/cli@latest && npm clear cache --force
+```
+
+
+-- Move to your root project
+```bash
+cd yourproject
+```
+
+-- Change the baseUri variable inside: src/environments/environment.ts or the baseUri directly at task.service
+
+--Install dependencies
+```bash
+npm install && ng serve
+```
+
+--Run the Server
+```bash
+ng serve
+```
+
+# Project Management System
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
@@ -13,15 +58,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

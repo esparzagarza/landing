@@ -21,6 +21,13 @@ const getUsers = (req, res = response) => {
 }
 
 const createUser = async (req, res = response) => {
+
+    return res.status(400).json({
+        ok: true,
+        msg: 'User already exist'
+    });
+
+
     var token = await createJWT(req.body.name, req.body.email);
     try {
         req.getConnection((err, con) => {
@@ -57,10 +64,10 @@ const loginUsuario = async (req, res = response) => {
             con.query('SELECT * FROM users WHERE email = ? LIMIT 1', [req.body.email], (error, results, fields) => {
                 if (error) throw error;
                 if (results.length === 1) {
-                    
+
                     const validPwd = bcrypt.compareSync(req.body.password, results[0].password);
                     if (!validPwd) { return res.status(400).json({ ok: false, msg: 'Cannot be logged' }); }
-                    
+
                     return res.status(200).json({
                         ok: true,
                         data: results,
