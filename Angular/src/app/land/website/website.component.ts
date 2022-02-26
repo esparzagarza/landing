@@ -9,7 +9,7 @@ import { WebsiteService } from '../services/website.service';
 })
 export class WebsiteComponent implements OnInit {
 
-  public selectedCat: Category | any = {};
+  public selectedCat: string = '5';
   public reloadedItems: Item[] = [];
   public getItems: Item[] = [];
   public getCategories: Category[] = [];
@@ -23,9 +23,8 @@ export class WebsiteComponent implements OnInit {
   ngOnInit(): void {
     this.webService.getItems()
       .subscribe(resp => {
-        this.selectedCat = { id: '1', name: 'Todos los Sistemas', icon: 'home' };
         this.getItems = resp;
-        this.reloadItems('1');
+        this.reloadItems(this.selectedCat);
       });
 
     this.webService.getCategories()
@@ -33,8 +32,9 @@ export class WebsiteComponent implements OnInit {
   }
 
   reloadItems(cat_id: string) {
-    this.selectedCat = this.getCategories.find(cat => cat.id == cat_id);
-    this.reloadedItems = this.getItems.filter(item => item.category_id == this.selectedCat.id);
+
+    this.selectedCat = cat_id ? cat_id : '1';
+    this.reloadedItems = this.getItems.filter(item => item.category_id == this.selectedCat);
   }
 
 }

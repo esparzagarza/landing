@@ -4,6 +4,7 @@
     "short_name": "ESPARZAGARZA",
     "author_page": "https://esparzagarza.mx",
     "linkedin": "https://www.linkedin.com/in/isc-pedroesparza",
+    "facebook": "https://www.facebook.com/soyesparzagarza",
 
     "permittedTypes": [
         { "key": "activity", "value": "Activity" },
