@@ -13,8 +13,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class LoginComponent {
 
   myForm: FormGroup = this.fb.group({
-    email: ['mpouros@example.net', [Validators.required, Validators.email]],
-    password: ['password', [Validators.required, Validators.minLength(6)]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
   constructor(

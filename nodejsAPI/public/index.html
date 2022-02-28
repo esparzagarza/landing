@@ -1,16 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <base href="/">
+  <title>Desarrollo de Sistemas Web : EsparzaGarza MX</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso denegado</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+  <meta charset="utf-8">
 
-<body>
-    <h1>Acceso Denegado</h1>
-</body>
+  <meta name="description" content="Desarrollo de Sistemas Web : EsparzaGarza MX">
 
-</html>
+  <meta name="keywords" content="Task, Management, System, Angular, PHP, API, RESTfull, admin themes, web design, web development">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:locale" content="en_US">
+
+  <meta property="og:type" content="article">
+
+  <meta property="og:title" content="Desarrollo de Sistemas Web : EsparzaGarza MX">
+
+  <meta property="og:url" content="https://esparzagarza.mx">
+
+  <meta property="og:site_name" content="Desarrollo de Sistemas Web : EsparzaGarza MX">
+
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <style type="text/css">@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+
+  <style>@charset "UTF-8";:root{--tagify-dd-color-primary:rgb(53,149,246);--tagify-dd-bg-color:white}body{--fc-event-border-color:#04C8C8;--fc-event-bg-color:#04C8C8;--fc-event-text-color:#FFFFFF}</style><link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/plugins/global/plugins.bundle.css"></noscript>
+
+  <style>@charset "UTF-8";:root{--bs-blue:#009ef6;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-gray:#7E8299;--bs-gray-dark:#3F4254;--bs-gray-100:#F5F8FA;--bs-gray-200:#EFF2F5;--bs-gray-300:#E4E6EF;--bs-gray-400:#B5B5C3;--bs-gray-500:#A1A5B7;--bs-gray-600:#7E8299;--bs-gray-700:#5E6278;--bs-gray-800:#3F4254;--bs-gray-900:#181C32;--bs-white:#ffffff;--bs-light:#F5F8FA;--bs-primary:#04C8C8;--bs-secondary:#E4E6EF;--bs-success:#009EF7;--bs-info:#7239EA;--bs-warning:#FFC700;--bs-danger:#F1416C;--bs-dark:#181C32;--bs-white-rgb:255,255,255;--bs-light-rgb:245,248,250;--bs-primary-rgb:4,200,200;--bs-secondary-rgb:228,230,239;--bs-success-rgb:0,158,247;--bs-info-rgb:114,57,234;--bs-warning-rgb:255,199,0;--bs-danger-rgb:241,65,108;--bs-dark-rgb:24,28,50;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:24,28,50;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:"Roboto",sans-serif;--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#181C32;--bs-body-bg:#ffffff}*,::after,::before{box-sizing:border-box}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}svg{vertical-align:middle}.d-flex{display:flex!important}.flex-row{flex-direction:row!important}.flex-column{flex-direction:column!important}:root{--bs-light-primary:#DCFDFD;--bs-active-primary:#00AFAF;--bs-light-success:#F1FAFF;--bs-active-success:#0095E8;--bs-light-info:#F8F5FF;--bs-active-info:#5014D0;--bs-light-warning:#FFF8DD;--bs-active-warning:#F1BC00;--bs-light-danger:#FFF5F8;--bs-active-danger:#D9214E;--bs-light-dark:#EFF2F5;--bs-active-dark:#131628;--bs-gray-100:#F5F8FA;--bs-gray-200:#EFF2F5;--bs-gray-300:#E4E6EF;--bs-gray-400:#B5B5C3;--bs-gray-500:#A1A5B7;--bs-gray-600:#7E8299;--bs-gray-700:#5E6278;--bs-gray-800:#3F4254;--bs-gray-900:#181C32;--bs-xs:0;--bs-sm:576px;--bs-md:768px;--bs-lg:992px;--bs-xl:1200px;--bs-xxl:1400px}.flex-root{flex:1}.flex-column-fluid{flex:1 0 auto}.flex-row-fluid{flex:1 auto;min-width:0}.scrolltop{display:none;justify-content:center;align-items:center;width:36px;height:36px;position:fixed;bottom:40px;right:20px;cursor:pointer;z-index:100;background-color:#04c8c8;box-shadow:0 .5rem 1.5rem .5rem rgba(0,0,0,.075);opacity:0;transition:color .2s ease,background-color .2s ease;border-radius:.475rem}.scrolltop .svg-icon svg{height:24px;width:24px}.scrolltop .svg-icon svg [fill]:not(.permanent):not(g){transition:fill .3s ease;fill:#fff}.scrolltop .svg-icon svg:hover [fill]:not(.permanent):not(g){transition:fill .3s ease}.scrolltop:hover .svg-icon svg [fill]:not(.permanent):not(g){transition:fill .3s ease;fill:#fff}.scrolltop:hover .svg-icon svg:hover [fill]:not(.permanent):not(g){transition:fill .3s ease}@media (max-width:991.98px){.scrolltop{bottom:30px;right:15px;width:30px;height:30px}}.svg-icon{line-height:1}.svg-icon svg{height:1.15rem;width:1.15rem}.svg-icon svg [fill]:not(.permanent):not(g){transition:fill .3s ease;fill:#a1a5b7}.svg-icon svg:hover [fill]:not(.permanent):not(g){transition:fill .3s ease}@media (min-width:992px){div,span{scrollbar-width:thin;scrollbar-color:#eff2f5 transparent}div::-webkit-scrollbar,span::-webkit-scrollbar{width:.4rem;height:.4rem}div::-webkit-scrollbar-thumb,span::-webkit-scrollbar-thumb{background-color:#eff2f5}div:hover,span:hover{scrollbar-color:#e9edf1 transparent}div:hover::-webkit-scrollbar-thumb,span:hover::-webkit-scrollbar-thumb{background-color:#e9edf1}}html{font-family:sans-serif;text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}body,html{height:100%;margin:0;padding:0;font-size:13px!important;font-weight:400;font-family:Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (max-width:991.98px){body,html{font-size:13px!important}}@media (max-width:767.98px){body,html{font-size:12px!important}}body{display:flex;flex-direction:column;color:#181c32}body{background-color:#f3f6f9}@media (min-width:992px){.wrapper{transition:padding-left .3s ease,margin-right .3s ease}}</style><link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/style.bundle.css"></noscript>
+
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+
+<body id="kt_body" style="background-image: url()" class="header-fixed header-tablet-and-mobile-fixed">
+
+  <div class="d-flex flex-column flex-root">
+
+    <div class="page d-flex flex-row flex-column-fluid">
+
+      <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
+        <app-root></app-root>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+
+    <span class="svg-icon">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+
+        <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="black"></rect>
+
+        <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="black"></path>
+
+      </svg>
+
+    </span>
+
+  </div>
+
+  <script>var hostUrl = "assets/";</script>
+
+  <script src="assets/plugins/global/plugins.bundle.js"></script>
+
+  <script src="assets/js/scripts.bundle.js"></script>
+
+<script src="runtime.314c4dea35b871a9.js" type="module"></script><script src="polyfills.6e680b2a2ffa7886.js" type="module"></script><script src="main.f742bf66597a393c.js" type="module"></script>
+
+</body></html>

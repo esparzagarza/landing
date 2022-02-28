@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://preview.esparzagarza.mx/api'
-
+  baseUrl: 'http://localhost:4001/api'
 };
