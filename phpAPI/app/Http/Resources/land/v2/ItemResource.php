@@ -19,16 +19,13 @@ class ItemResource extends JsonResource
 
         return [
             'id' => $this->id,
+            'category_id' => $this->category_id,
             'name' => $this->name,
             'price' => $this->price,
             'description' => $this->description,
             'linkTo' => $this->linkTo,
             'tags' => $this->tags,
             'image' => $this->image,
-            'category' => [
-                'id' => $this->category['id'],
-                'name' => $this->category['name']
-            ],
             'screenshots' => $screenshots
         ];
     }

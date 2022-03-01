@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\land\v2;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\land\v2\ItemCollection;
 use App\Http\Resources\land\v2\ItemResource;
 use App\Models\Item;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return ItemResource::collection(Item::latest()->paginate());
+        return new ItemCollection(Item::latest()->paginate());
     }
 
     /**

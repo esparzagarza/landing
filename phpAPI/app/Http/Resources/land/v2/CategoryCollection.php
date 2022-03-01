@@ -17,6 +17,8 @@ class CategoryCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
+            'ok' => true,
+            'msg' => 'List retrieved',
             'data' => $this->collection,
             'meta' => [
                 'organization' => 'EsparzaGarzaMx',

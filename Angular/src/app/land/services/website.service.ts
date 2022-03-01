@@ -14,7 +14,7 @@ export class WebsiteService {
   constructor(private http: HttpClient) { }
 
   getItems() {
-    const url: string = `${this.baseUrl}/land`;
+    const url: string = `${this.baseUrl}/land/v2/item`;
     return this.http.get<WebsiteResponse>(url)
       .pipe(
         map(resp => resp.data),
@@ -23,7 +23,7 @@ export class WebsiteService {
   }
 
   getCategories() {
-    const url: string = `${this.baseUrl}/land/categories`;
+    const url: string = `${this.baseUrl}/land/v2/category`;
     return this.http.get<WebsiteResponse>(url)
       .pipe(
         map(resp => resp.data),
