@@ -53,12 +53,12 @@
                                 style="min-height: 250px; background-position: right top; background-size: 40% auto; background-image: url('{{ item.image }}')">
                             </div>
                             <div class="card-body text-center">
-                                <span class="card-title fw-bolder text-muted text-hover-primary fs-4">{{ item.tags |
-                                    slice:0:20 }}</span>
+                                <span class="card-title fw-bolder text-muted text-hover-primary fs-4">{{ item.tags
+                                    }}</span>
                                 <div class="py-1">
                                     <span class="text-dark fs-1 fw-bolder me-2">{{ item.name }}</span>
                                     <br />
-                                    <span class="fw-bold text-muted fs-7">{{ item.description | slice:0:20 }}</span>
+                                    <span class="fw-bold text-muted fs-7">{{ item.description }}</span>
                                 </div>
                             </div>
                             <div class="card-footer">
